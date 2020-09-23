@@ -80,6 +80,7 @@ form ion-icon{
 
 .item{
     width: 100%;
+    max-width: 30rem;;
     border-radius: 8px;
     background-color: rgb(37, 37, 37);
     padding: 15px;
@@ -107,13 +108,20 @@ form ion-icon{
 .view-button{
     text-decoration: none;
     text-align: center;
-    width: 130px;
+    min-width: 130px;
+    float: right;
+    margin-right: 2px !important;
     padding: 10px 0;
-    background-color: #404041;
+    background-color: rgba(87, 87, 87, 0.9);
     color: whitesmoke;
     font-size: 1.4rem;
     margin-top: 20px;
     align-self: flex-start;
+}
+
+.view-button:hover{
+    transition: all 400ms;
+    background-color: rgba(64, 64, 65, 0.7);
 }
 
 .item-data{
@@ -123,4 +131,42 @@ form ion-icon{
     font-size: 1.4rem;
     letter-spacing: .05rem;
     line-height: 2rem;;
+}
+
+.container .initial .brand{
+    font-size: 7rem;
+}
+
+.container .initial form{
+    max-width: 800px;
+}
+
+.container .initial form input{
+    padding: 20px;
+    font-size: 3rem;
+}
+
+/********************  RESPONSIVE  *************************/
+
+@media (max-width: 768px){
+    .search-result{
+        grid-gap: 10px;
+    }
+
+    .container .initial .brand{
+        font-size: 4rem;
+    }
+
+    .container .initial form{
+        max-width: 500px;
+    }
+
+    .container .initial form input{
+        padding: 10px;
+        font-size: 2rem;
+    }
+
+    .item{
+        margin: 20px auto;
+    }
 }
